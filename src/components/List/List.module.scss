@@ -18,6 +18,7 @@
     font-size: ($base-size * 2.5);
     text-transform: uppercase;
     color: $color-light;
+  
 
     span {
         font-size: 75%;
@@ -37,4 +38,5 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    
 }
