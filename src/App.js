@@ -5,11 +5,13 @@ import Container from './components/Container/Container'
 import ColumnForm from './components/ColumnForm/ColumnForm';
 const App = () => {
   return (
-    <Container>
+    <div>
+      <Container>
       <Hero />
       <SearchForm />
       <List/>
       </Container>
+    </div>
   );
 };
 

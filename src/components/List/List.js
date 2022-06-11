@@ -3,7 +3,7 @@ import Column from './../Column/Column';
 import ColumnForm from './../ColumnForm/ColumnForm';
 import { useState } from 'react';
 import shortid from 'shortid';
-import CardForm from '../CardForm/CardForm';
+
 
 const List = () => {
     const [columns, setColumns] = useState([
@@ -41,9 +41,12 @@ const List = () => {
 	};
 	const addCard = (newCard, columnId) => {
 		const columnsUpdated = columns.map(column => {
-			if(column.id === columnId)
+			if(column.id === columnId){
+			
 				return { ...column, cards: [...column.cards, { id: shortid(), title: newCard.title }]}
+			}	
 			else
+
 				return column
 		})
 	
@@ -58,7 +61,7 @@ const List = () => {
 			<p className={styles.description}>Interesting things I want to check out</p>
 			
 			<section className={styles.columns}>
-				{columns.map(column => <Column key={column.id} title={column.title} icon={column.icon} cards={column.cards} />)}
+				{columns.map(column => <Column key={column.id}id={column.id} title={column.title} icon={column.icon} cards={column.cards} action={addCard} />)}
 			
 			</section>
 			<ColumnForm action={addColumn} />
