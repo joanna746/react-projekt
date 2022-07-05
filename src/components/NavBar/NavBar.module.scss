@@ -18,5 +18,9 @@ a {
     color: $color-light;
     font-weight: 500;
     font-size: 24px;
+    text-decoration: none;
     
+}
+.linkActive{
+    color: $color-warning;
 }

@@ -7,8 +7,7 @@ import { getFilteredCards } from '../../redux/store';
 
 function Column(props) {
     const cards = useSelector(state => getFilteredCards(state, props.id)); 
-    
-  
+
     
     return (
         <>
