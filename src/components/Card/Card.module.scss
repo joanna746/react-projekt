@@ -11,3 +11,29 @@
     justify-content: space-between;
     font-weight: bold;
 }
+.title {
+    text-align: center;
+    font-size: ($base-size * 1.5);
+    margin: 0 0 ($base-size * 1.5) 0;
+    
+    
+  }
+  
+  .button {
+    padding-right: $base-size;
+    color: $color-warning;
+    font-size: ($base-size * 2);
+    vertical-align: middle;
+    position: relative;
+    
+    
+  }
+  .isActive {
+    color: #e1b12c;
+}
+
+
+ 
+  
+ 
+ 
