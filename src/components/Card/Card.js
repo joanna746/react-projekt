@@ -1,27 +1,34 @@
 import styles from './Card.module.scss';
 import { useDispatch } from 'react-redux';
-import {toggleCartFavorite} from '../../redux/store'
+import {toggleCartFavourite} from '../../redux/cardsReducer'
 import clsx from 'clsx';
 import { useState } from 'react';
+import { removeCard } from '../../redux/cardsReducer';
+
 
 const Card = (props) => {
     const dispatch = useDispatch();
     const cardId = props.id;
     
-    const [isFavorite,setFavorite] = useState();
+    
+    const [isFavourite,setFavourite] = useState(props.isFavourite);
   
 
     const handleSubmit =()  => {
-        if(isFavorite === false) {
-            setFavorite(true);
+        if(isFavourite === false) {
+            setFavourite(true);
           } else {
-            setFavorite(false);
+            setFavourite(false);
           }
         
-        dispatch(toggleCartFavorite(cardId));
+        dispatch(toggleCartFavourite(cardId));
         
         
         
+    };
+    const removedCard = e => {
+        e.preventDefault()
+        dispatch(removeCard(cardId))
     };
 
 
@@ -30,7 +37,9 @@ const Card = (props) => {
         <span onClick={() => handleSubmit(props.id, props.isFavourite, props.title)} className={clsx(styles.button, props.isFavourite && styles.active) }>
                 <span className='fa fa-star-o' />
             </span>
-        
+            <span onClick={removedCard} className={styles.button}>
+                <span className='fa fa-trash' />
+            </span>
         
         </li>
 

@@ -2,11 +2,12 @@ import styles from './List.module.scss';
 import Column from './../Column/Column';
 import ColumnForm from './../ColumnForm/ColumnForm';
 import { useSelector } from 'react-redux';
-import { getAllColumns, getColumnsByList, getListById } from '../../redux/store';
+import {  getColumnsByList } from '../../redux/columnsReducer';
 import { useParams } from 'react-router';
 import SearchForm from '../SearchForm/SearchForm';
 import {Navigate} from 'react-router-dom'
-import ListForm from '../ListForm/ListForm';
+import { getListById} from '../../redux/listsReducer'
+
 
 
 
@@ -15,10 +16,11 @@ const List = () => {
 	const { listId } = useParams();
 	
 	
+	
 	const listData = useSelector(state => getListById(state,listId));
 	
 	const columns = useSelector(state=> getColumnsByList(state,listId))
-	console.log(columns)
+	
 	if(!listData) return <Navigate to="/" />
 
 	return (

@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux";
 import Card from '../Card/Card'
 import PageTitle from "../PageTitle/PageTitle";
-import { getFavouriteCards } from "../../redux/store";
-import styles from './Favourite.module.scss';
+import { getFavouriteCards } from "../../redux/cardsReducer";
+import styles from '../Card/Card.module.scss';
 
 
 
@@ -14,7 +14,7 @@ console.log(favouriteCard)
 if (favouriteCard.length === 0) 
     return ( 
       <div>
-        <PageTitle>Favorite</PageTitle>
+        <PageTitle>Favourite</PageTitle>
         <p className={styles.subtitle}>No cards </p>
       </div>
     );

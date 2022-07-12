@@ -1,5 +1,5 @@
 const strContains = (stringOne, stringTwo) => {
-    if (stringOne.toLowerCase().includes(stringTwo.toLowerCase()))
+    if (stringOne.toLowerCase().includes(stringTwo.toString().toLowerCase()))
     return true
     else return false
 

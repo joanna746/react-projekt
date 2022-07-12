@@ -1,25 +1,25 @@
 const initialState = {
     columns: [
       {
-        id: 1,
+        id: '1',
         listId: '1',
         title: 'Books',
         icon: 'book',
       },
       {
-        id: 2,
+        id:'2',
         listId: '1',
         title: 'Movies',
         icon: 'film',
       },
       {
-        id: 3,
+        id: '3',
         listId: '1',
         title: 'Games',
         icon: 'gamepad',
       },
       {
-        id:4,
+        id:'4',
         listId: '2',
         title:'Songs',
         icon: 'music'
@@ -29,12 +29,12 @@ const initialState = {
     ],
   
     cards: [
-      { id: '1', columnId: 1,isFavourite: false, title: 'This is Going to Hurt'},
-      { id: '2', columnId: 1,isFavourite: false, title: 'Interpreter of Maladies' },
-      { id: '3', columnId: 2,isFavourite: false, title: 'Harry Potter' },
-      { id: '4', columnId: 2,isFavourite: false,title: 'Star Wars' },
-      { id: '5', columnId: 3,isFavourite: false, title: 'The Witcher' },
-      { id: '6', columnId: 3,isFavourite: false, title: 'Skyrim' }
+      { id: '1', columnId: '1',isFavourite: false, title: 'This is Going to Hurt'},
+      { id: '2', columnId: '1',isFavourite: false, title: 'Interpreter of Maladies' },
+      { id: '3', columnId: '2',isFavourite: false, title: 'Harry Potter' },
+      { id: '4', columnId: '2',isFavourite: false,title: 'Star Wars' },
+      { id: '5', columnId: '3',isFavourite: false, title: 'The Witcher' },
+      { id: '6', columnId: '3',isFavourite: false, title: 'Skyrim' }
     ],
     lists: [
       {
